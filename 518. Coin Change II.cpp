@@ -3,10 +3,10 @@ using namespace std;
 class Solution {
 public:
     int change(int amount, vector<int>& coins) {
-        vector<int> dp(amount+1,0); dp[0]=1;
+        vector<unsigned long long> dp(amount+1,0); dp[0]=1;
         for(int c: coins){
             for(int x=c; x<=amount; ++x) dp[x]+=dp[x-c];
         }
-        return dp[amount];
+        return static_cast<int>(dp[amount]);
     }
 };
