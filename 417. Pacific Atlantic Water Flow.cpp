@@ -1,3 +1,6 @@
+// Problem (short):
+// Given a height grid, return cells from which water can flow to both the Pacific and Atlantic oceans.
+
 #include <bits/stdc++.h>
 using namespace std;
 class Solution {

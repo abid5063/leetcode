@@ -1,3 +1,6 @@
+// Problem (short):
+// Given an array, return the maximum product of any contiguous subarray.
+
 
 
 #include <vector>
@@ -7,27 +10,20 @@ using namespace std;
 class Solution {
 public:
     int maxProduct(vector<int>& nums) {
-        if (nums.empty()) return 0;
-        
-        int maxProd = nums[0];
-        int minProd = nums[0];
-        int result = nums[0];
-        
-        for (int i = 1; i < nums.size(); i++) {
-            // If current number is negative, swap max and min
-            // because multiplying by negative flips the sign
-            if (nums[i] < 0) {
-                swap(maxProd, minProd);
-            }
-            
-            // Update max and min products ending at current position
-            maxProd = max(nums[i], maxProd * nums[i]);
-            minProd = min(nums[i], minProd * nums[i]);
-            
-            // Update global maximum
-            result = max(result, maxProd);
+        int best = nums[0];
+        int curMax = nums[0];
+        int curMin = nums[0];
+
+        for (int i = 1; i < nums.size(); ++i) {
+            int x = nums[i];
+            int prevMax = curMax;
+            int prevMin = curMin;
+
+            curMax = max({x, x * prevMax, x * prevMin});
+            curMin = min({x, x * prevMax, x * prevMin});
+            best = max(best, curMax);
         }
-        
-        return result;
+
+        return best;
     }
 };

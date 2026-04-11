@@ -1,4 +1,27 @@
+// Problem (short):
+// Given the head of a linked list, reverse the list and return the new head.
+
 #include <bits/stdc++.h>
 using namespace std;
-struct ListNode{int val; ListNode* next; ListNode(int x):val(x),next(nullptr){} };
-class Solution { public: ListNode* reverseList(ListNode* head){ ListNode* prev=nullptr; while(head){ auto nxt=head->next; head->next=prev; prev=head; head=nxt; } return prev; } };
+struct ListNode
+{
+    int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(nullptr) {}
+};
+class Solution
+{
+public:
+    ListNode *reverseList(ListNode *head)
+    {
+        ListNode *prev = nullptr;
+        while (head)
+        {
+            auto nxt = head->next;
+            head->next = prev;
+            prev = head;
+            head = nxt;
+        }
+        return prev;
+    }
+};

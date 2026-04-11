@@ -1,3 +1,6 @@
+// Problem (short):
+// Given n, return the number of set bits for every number from 0 to n.
+
 #include <bits/stdc++.h>
 using namespace std;
 class Solution

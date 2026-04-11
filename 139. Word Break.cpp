@@ -1,3 +1,6 @@
+// Problem (short):
+// Given a string and a dictionary, check if the string can be split into valid dictionary words.
+
 #include <bits/stdc++.h>
 using namespace std;
 class Solution {

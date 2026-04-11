@@ -1,3 +1,6 @@
+// Problem (short):
+// Given a 32-bit integer, reverse its bits and return the result.
+
 class Solution {
 public:
     int reverseBits(int n) {

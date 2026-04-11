@@ -1,3 +1,6 @@
+// Problem (short):
+// Given heights of vertical lines, find two lines that can hold the most water.
+
 #include <bits/stdc++.h>
 using namespace std;
 class Solution {

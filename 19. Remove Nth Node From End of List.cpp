@@ -1,12 +1,40 @@
+// Problem (short):
+// Given a linked list, remove the nth node from the end and return the head.
+
 #include <bits/stdc++.h>
 using namespace std;
-struct ListNode { int val; ListNode* next; ListNode(int x): val(x), next(nullptr) {} };
-class Solution {
+struct ListNode
+{
+    int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(nullptr) {}
+};
+class Solution
+{
 public:
-    ListNode* removeNthFromEnd(ListNode* head, int n) {
-        ListNode dummy(0); dummy.next=head; ListNode* fast=&dummy; ListNode* slow=&dummy;
-        for(int i=0;i<n;i++) fast=fast->next;
-        while(fast->next){ fast=fast->next; slow=slow->next; }
-        ListNode* del=slow->next; slow->next=del?del->next:nullptr; return dummy.next;
+    ListNode *removeNthFromEnd(ListNode *head, int n)
+    {
+        if (!head)
+            return head;
+
+        int count = 0;
+        ListNode *itr = head;
+        while (itr)
+        {
+            count++;
+            itr = itr->next;
+        }
+
+        if (n == count)
+            return head->next;
+
+        itr = head;
+        for (int i = 1; i < count - n; i++)
+            itr = itr->next;
+
+        if (itr->next)
+            itr->next = itr->next->next;
+
+        return head;
     }
 };

@@ -1,12 +1,19 @@
+// Problem (short):
+// Given stock prices by day, find the maximum profit from one buy and one sell.
+
 #include <bits/stdc++.h>
 using namespace std;
 class Solution { 
     public: 
     int maxProfit(vector<int>& prices){ 
-        int mn=INT_MAX, best=0; 
-        for(int p: prices){ 
-            mn=min(mn,p); 
-            best=max(best, p-mn); } 
-        return best; 
+        int best =0; 
+        int mn= prices[0];
+        int n=prices.size();
+        for(int i=0; i< n; i++){
+            best= max(best, prices[i]-mn);
+            mn=min(mn, prices[i]);
+        }
+
+        return best;
     } 
 };

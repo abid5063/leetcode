@@ -1,3 +1,6 @@
+// Problem (short):
+// Given an array, return an array where each element is the product of all other elements.
+
 #include <bits/stdc++.h>
 using namespace std;
 class Solution

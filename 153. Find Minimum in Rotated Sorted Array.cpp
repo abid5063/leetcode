@@ -1,3 +1,6 @@
+// Problem (short):
+// Given a rotated sorted array with unique values, return its minimum element.
+
 #include <bits/stdc++.h>
 using namespace std;
 class Solution

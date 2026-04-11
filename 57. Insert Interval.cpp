@@ -1,3 +1,33 @@
+// Problem (short):
+// Given sorted non-overlapping intervals and one new interval, insert and merge if needed.
+
 #include <bits/stdc++.h>
 using namespace std;
-class Solution { public: vector<vector<int>> insert(vector<vector<int>>& a, vector<int>& newI){ vector<vector<int>> res; size_t i=0; while(i<a.size() && a[i][1] < newI[0]) res.push_back(a[i++]); while(i<a.size() && a[i][0] <= newI[1]){ newI[0]=min(newI[0], a[i][0]); newI[1]=max(newI[1], a[i][1]); i++; } res.push_back(newI); while(i<a.size()) res.push_back(a[i++]); return res; } };
+
+class Solution {
+public:
+    vector<vector<int>> insert(vector<vector<int>>& intervals, vector<int>& newInterval) {
+        vector<vector<int>> res;
+        int i = 0;
+
+        while (i < (int)intervals.size() && intervals[i][1] < newInterval[0]) {
+            res.push_back(intervals[i]);
+            i++;
+        }
+
+        while (i < (int)intervals.size() && intervals[i][0] <= newInterval[1]) {
+            newInterval[0] = min(newInterval[0], intervals[i][0]);
+            newInterval[1] = max(newInterval[1], intervals[i][1]);
+            i++;
+        }
+
+        res.push_back(newInterval);
+
+        while (i < (int)intervals.size()) {
+            res.push_back(intervals[i]);
+            i++;
+        }
+
+        return res;
+    }
+};

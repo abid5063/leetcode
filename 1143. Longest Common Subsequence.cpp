@@ -1,3 +1,6 @@
+// Problem (short):
+// Given two strings, return the length of their longest common subsequence.
+
 #include <bits/stdc++.h>
 using namespace std;
 class Solution

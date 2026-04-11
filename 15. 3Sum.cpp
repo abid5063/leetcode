@@ -1,3 +1,6 @@
+// Problem (short):
+// Given an array, return all unique triplets whose sum is zero.
+
 #include <bits/stdc++.h>
 using namespace std;
 class Solution {

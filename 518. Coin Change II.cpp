@@ -1,3 +1,6 @@
+// Problem (short):
+// Given coin values and an amount, return how many combinations can make that amount.
+
 #include <bits/stdc++.h>
 using namespace std;
 class Solution {

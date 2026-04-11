@@ -1,3 +1,6 @@
+// Problem (short):
+// Given a string, return the length of the longest substring with no repeated characters.
+
 #include <bits/stdc++.h>
 using namespace std;
 class Solution {

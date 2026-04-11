@@ -1,3 +1,6 @@
+// Problem (short):
+// Given an integer, return how many bits are set to 1.
+
 #include <bits/stdc++.h>
 using namespace std;
 class Solution {

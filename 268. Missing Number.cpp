@@ -1,3 +1,6 @@
+// Problem (short):
+// Given numbers from 0 to n with one missing, return the missing number.
+
 #include <bits/stdc++.h>
 using namespace std;
 class Solution {

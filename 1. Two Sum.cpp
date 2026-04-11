@@ -1,3 +1,6 @@
+// Problem (short):
+// Given an array and a target, return the indices of two numbers that add up to the target.
+
 #include <bits/stdc++.h>
 using namespace std;
 class Solution {

@@ -1,3 +1,6 @@
+// Problem (short):
+// Design encode and decode methods to safely convert a list of strings to one string and back.
+
 #include <bits/stdc++.h>
 using namespace std;
 class Codec {

@@ -1,3 +1,6 @@
+// Problem (short):
+// Given an array, check if any value appears at least twice.
+
 #include <bits/stdc++.h>
 using namespace std;
 class Solution

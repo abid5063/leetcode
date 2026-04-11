@@ -1,3 +1,6 @@
+// Problem (short):
+// Given an array, return the length of the longest strictly increasing subsequence.
+
 #include <bits/stdc++.h>
 using namespace std;
 class Solution
@@ -5,15 +8,25 @@ class Solution
 public:
     int lengthOfLIS(vector<int> &nums)
     {
-        vector<int> tail;
-        for (int x : nums)
+        int n = nums.size();
+        if (n == 0)
+            return 0;
+
+        vector<int> dp(n, 1);
+        int ans = 1;
+
+        for (int i = 0; i < n; i++)
         {
-            auto it = lower_bound(tail.begin(), tail.end(), x);
-            if (it == tail.end())
-                tail.push_back(x);
-            else
-                *it = x;
+            for (int j = 0; j < i; j++)
+            {
+                if (nums[j] < nums[i])
+                {
+                    dp[i] = max(dp[i], dp[j] + 1);
+                }
+            }
+            ans = max(ans, dp[i]);
         }
-        return tail.size();
+
+        return ans;
     }
 };

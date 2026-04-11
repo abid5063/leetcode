@@ -1,3 +1,6 @@
+// Problem (short):
+// Return the sum of two integers without using plus or minus operators.
+
 #include <bits/stdc++.h>
 using namespace std;
 class Solution

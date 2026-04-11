@@ -1,3 +1,6 @@
+// Problem (short):
+// Given coin values and an amount, return the fewest coins needed, or -1 if impossible.
+
 
 #include <vector>
 #include <algorithm>

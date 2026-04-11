@@ -1,3 +1,6 @@
+// Problem (short):
+// Given an unsorted array, return the length of the longest sequence of consecutive numbers.
+
 #include <bits/stdc++.h>
 using namespace std;
 class Solution {
